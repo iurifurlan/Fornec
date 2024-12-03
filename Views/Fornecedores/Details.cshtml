@@ -1,0 +1,103 @@
+﻿@model Fornec.Models.Fornecedor;
+
+@{
+    ViewData["Title"] = "Mais Sobre o Fornecedor";
+}
+
+<body style="background-image: linear-gradient(to bottom, #87CEEB, #ADD8E6); color: black;">
+    <div class="container mt-5">
+        <!-- Título Centralizado -->
+        <h1 class="text-center mb-4">Mais Sobre o Fornecedor</h1>
+        <form class="card shadow-lg p-4 bg-white rounded">
+            <!-- Detalhes do Fornecedor -->
+            <h4 class="text-center mb-4">Fornecedor</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.RazaoSocial)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.RazaoSocial)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.NomeFantasia)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NomeFantasia)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.CNPJ)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CNPJ)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Telefone)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Logradouro)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Logradouro)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Numero)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Numero)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Complemento)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Bairro)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Cidade)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.Estado)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Estado)
+                </dd>
+                <dt class="col-sm-4 text-right">
+                    @Html.DisplayNameFor(model => model.CEP)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.CEP)
+                </dd>
+            </dl>
+        </form>
+
+        <!-- Botões -->
+        <div class="text-center mt-4">
+            <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+            <a class="btn btn-outline-danger btn-sm" asp-action="Index">Voltar</a>
+        </div>
+    </div>
+</body>

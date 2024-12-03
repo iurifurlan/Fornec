@@ -1,0 +1,126 @@
+﻿@model Fornec.Models.Fornecedor;
+
+@{
+    ViewData["Title"] = "Excluir Fornecedor";
+}
+<body style="background-image:linear-gradient(blue,black); color: white">
+    <h1>Excluir Fornecedor</h1>
+
+    <div>
+        <h4>Fornecedor</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.RazaoSocial)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.RazaoSocial)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.NomeFantasia)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NomeFantasia)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CNPJ)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CNPJ)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Logradouro)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Logradouro)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Numero)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Numero)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Complemento)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Complemento)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Bairro)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Bairro)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cidade)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cidade)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Estado)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CEP)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CEP)
+            </dd>
+        </dl>
+
+        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmModal">
+            Apagar
+        </button>
+        <a class="btn btn-secondary text-white btn-sm" asp-action="Index">Voltar</a>
+
+        <!-- Modal de confirmação -->
+        <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #343a40; color: white; font-family: Arial, sans-serif;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmModalLabel" style="font-weight: bold; color: #ffcc00;">
+                            Confirmação de Exclusão
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                    </div>
+                    <div class="modal-body" style="font-size: 16px; color: #ffffff;">
+                        Tem certeza que deseja apagar este fornecedor?
+                    </div>
+                    <div class="modal-footer">
+                        <form asp-action="Delete" method="post">
+                            <input type="hidden" asp-for="Id" />
+                            <button type="submit" class="btn btn-danger">Sim</button>
+                        </form>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        
+        
+
+    </div>
+    
+</body>
